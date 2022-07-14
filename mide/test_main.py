@@ -26,7 +26,7 @@ import imageio
 def test_obj_initialization():
     """Verify that Object is initialized with the correct element type"""
 
-    path_to_json = "extractor.json"
+    path_to_json = "init.json"
     client_id = "unit_test"
     path_white_list = "data_test/dicom_white_list.csv"
     debug = False
@@ -96,12 +96,12 @@ def test_c_find_query_study_uid():
             yield 0xC000, None
 
 
-    path_to_json = "extractor.json"
+    path_to_json = "init.json"
     client_id = "unit_test"
     path_white_list = "dicom_white_list.csv"
     path_to_dicom_csv = "pacs_list/dicom_imported_an_x3.csv"
     debug = False
-    path_to_json = "extractor.json"
+    path_to_json = "init.json"
 
     examen = medical_exam(client_id, path_to_json, path_white_list, path_to_dicom_csv, debug)
 
@@ -186,12 +186,12 @@ def test_c_move_query_study_uid():
     stored_dicom = "/home/zenbook/Documents/code/python/mide/data_test/1.3.6.1.4.1.14519.5.2.1.7777.9002.154181272448537806873380883469"
     ds_test = dcmread(stored_dicom)
 
-    path_to_json = "extractor.json"
+    path_to_json = "init.json"
     client_id = "unit_test"
     path_white_list = "dicom_white_list.csv"
     path_to_dicom_csv = "pacs_list/dicom_imported_an_x3.csv"
     debug = False
-    path_to_json = "extractor.json"
+    path_to_json = "init.json"
 
     test_examen = medical_exam(client_id, path_to_json, path_white_list, path_to_dicom_csv, debug)
 
@@ -263,12 +263,12 @@ def test_dicom_image_corrupted_filter():
     """Test for rejection of corrupted image field:
     can open pixel array parameter"""
 
-    path_to_json = "extractor.json"
+    path_to_json = "init.json"
     client_id = "unit_test"
     path_white_list = "dicom_white_list.csv"
     path_to_dicom_csv = "pacs_list/dicom_imported_an_x3.csv"
     debug = False
-    path_to_json = "extractor.json"
+    path_to_json = "init.json"
 
     test_exam = medical_exam(client_id, path_to_json, path_white_list, path_to_dicom_csv, debug)
 
@@ -298,12 +298,12 @@ def test_dicom_modality_filter():
     stored_dicom = "/home/zenbook/Documents/code/python/mide/data_test/1.3.6.1.4.1.14519.5.2.1.7777.9002.154181272448537806873380883469"
     ds_test = dcmread(stored_dicom)
 
-    path_to_json = "extractor.json"
+    path_to_json = "init.json"
     client_id = "unit_test"
     path_white_list = "dicom_white_list.csv"
     path_to_dicom_csv = "pacs_list/dicom_imported_an_x3.csv"
     debug = False
-    path_to_json = "extractor.json"
+    path_to_json = "init.json"
 
     test_exam = medical_exam(client_id, path_to_json, path_white_list, path_to_dicom_csv, debug)
 
@@ -333,12 +333,12 @@ def test_dicom_normalization():
     stored_dicom = "data_test/test_dx.dcm"
     ds_test = dcmread(stored_dicom)
 
-    path_to_json = "extractor.json"
+    path_to_json = "init.json"
     client_id = "unit_test"
     path_white_list = "dicom_white_list.csv"
     path_to_dicom_csv = "pacs_list/dicom_imported_an_x3.csv"
     debug = False
-    path_to_json = "extractor.json"
+    path_to_json = "init.json"
 
     test_exam = medical_exam(client_id, path_to_json, path_white_list, path_to_dicom_csv, debug)
     test_exam.ds_dicom = ds_test
@@ -380,12 +380,12 @@ def test_dicom_tag_prefiltering():
     stored_dicom = "./data_test/test_mono_cr.dcm"
     ds_test = dcmread(stored_dicom)
 
-    path_to_json = "extractor.json"
+    path_to_json = "init.json"
     client_id = "unit_test"
     path_white_list = "dicom_white_list.csv"
     path_to_dicom_csv = "pacs_list/dicom_imported_an_x3.csv"
     debug = False
-    path_to_json = "extractor.json"
+    path_to_json = "init.json"
     test_exam = medical_exam(client_id, path_to_json, path_white_list, path_to_dicom_csv, debug)
     test_exam.list_dicom = [ds_test]
     list_tag_dicom = list(ds_test)
@@ -423,12 +423,12 @@ def test_dicom_to_png():
     path_dicom = "data_test/test_mri.dcm"
     ds_test_mri = dcmread(path_dicom)
 
-    path_to_json = "extractor.json"
+    path_to_json = "init.json"
     client_id = "unit_test"
     path_white_list = "dicom_white_list.csv"
     path_to_dicom_csv = "pacs_list/dicom_imported_an_x3.csv"
     debug = False
-    path_to_json = "extractor.json"
+    path_to_json = "init.json"
 
     test_exam = medical_exam(client_id, path_to_json, path_white_list, path_to_dicom_csv, debug)
 
@@ -465,12 +465,12 @@ def test_image_prefiltering():
     path_dicom = "data_test/test_mri.dcm"
     ds_test_mri = dcmread(path_dicom)
 
-    path_to_json = "extractor.json"
+    path_to_json = "init.json"
     client_id = "unit_test"
     path_white_list = "dicom_white_list.csv"
     path_to_dicom_csv = "pacs_list/dicom_imported_an_x3.csv"
     debug = False
-    path_to_json = "extractor.json"
+    path_to_json = "init.json"
 
     test_exam = medical_exam(client_id, path_to_json, path_white_list, path_to_dicom_csv, debug)
 
@@ -509,12 +509,12 @@ def test_image_thresholding():
     path_dicom = "data_test/test_mri.dcm"
     ds_test_mri = dcmread(path_dicom)
 
-    path_to_json = "extractor.json"
+    path_to_json = "init.json"
     client_id = "unit_test"
     path_white_list = "dicom_white_list.csv"
     path_to_dicom_csv = "pacs_list/dicom_imported_an_x3.csv"
     debug = False
-    path_to_json = "extractor.json"
+    path_to_json = "init.json"
 
     test_exam = medical_exam(client_id, path_to_json, path_white_list, path_to_dicom_csv, debug)
 
@@ -551,12 +551,12 @@ def test_get_background_color():
     path_dicom = "data_test/test_dx.dcm"
     ds_test_dx = dcmread(path_dicom)
 
-    path_to_json = "extractor.json"
+    path_to_json = "init.json"
     client_id = "unit_test"
     path_white_list = "dicom_white_list.csv"
     path_to_dicom_csv = "pacs_list/dicom_imported_an_x3.csv"
     debug = False
-    path_to_json = "extractor.json"
+    path_to_json = "init.json"
 
     test_exam = medical_exam(client_id, path_to_json, path_white_list, path_to_dicom_csv, debug)
     test_exam.ds_dicom = ds_test_dx
@@ -577,12 +577,12 @@ def test_ocr_processing():
     path_to_png = "data_test/test_png_on_bone_blur.png"
     png_image = imageio.v2.imread(path_to_png)
 
-    path_to_json = "extractor.json"
+    path_to_json = "init.json"
     client_id = "unit_test"
     path_white_list = "dicom_white_list.csv"
     path_to_dicom_csv = "pacs_list/dicom_imported_an_x3.csv"
     debug = False
-    path_to_json = "extractor.json"
+    path_to_json = "init.json"
 
     test_exam = medical_exam(client_id, path_to_json, path_white_list, path_to_dicom_csv, debug)
 
@@ -620,12 +620,12 @@ def test_ocr_postfiltering():
     path_to_png = "data_test/test_png_on_bone_blur.png"
     png_image = imageio.v2.imread(path_to_png)
 
-    path_to_json = "extractor.json"
+    path_to_json = "init.json"
     client_id = "unit_test"
     path_white_list = "dicom_white_list.csv"
     path_to_dicom_csv = "pacs_list/dicom_imported_an_x3.csv"
     debug = False
-    path_to_json = "extractor.json"
+    path_to_json = "init.json"
 
     test_exam = medical_exam(client_id, path_to_json, path_white_list, path_to_dicom_csv, debug)
 
@@ -678,12 +678,12 @@ def test_image_blanking():
     path_dicom = "data_test/test_dx.dcm"
     ds_test_dx = dcmread(path_dicom)
 
-    path_to_json = "extractor.json"
+    path_to_json = "init.json"
     client_id = "unit_test"
     path_white_list = "dicom_white_list.csv"
     path_to_dicom_csv = "pacs_list/dicom_imported_an_x3.csv"
     debug = False
-    path_to_json = "extractor.json"
+    path_to_json = "init.json"
 
     test_exam = medical_exam(client_id, path_to_json, path_white_list, path_to_dicom_csv, debug)
 
@@ -712,12 +712,12 @@ def test_patient_birth_date_deidentification():
     """Verifiy patient age is rounded to the lower 5 years"""
 
     stored_dicom = "/home/zenbook/Documents/code/python/mide/data_test/1.3.6.1.4.1.14519.5.2.1.7777.9002.154181272448537806873380883469"
-    path_to_json = "extractor.json"
+    path_to_json = "init.json"
     client_id = "unit_test"
     path_white_list = "dicom_white_list.csv"
     path_to_dicom_csv = "pacs_list/dicom_imported_an_x3.csv"
     debug = False
-    path_to_json = "extractor.json"
+    path_to_json = "init.json"
 
     test_exam = medical_exam(client_id, path_to_json, path_white_list, path_to_dicom_csv, debug)
     
@@ -755,12 +755,12 @@ def test_study_date_deidentification():
     """test for type, lengh and correct deindentification of the study date"""
     
     stored_dicom = "/home/zenbook/Documents/code/python/mide/data_test/1.3.6.1.4.1.14519.5.2.1.7777.9002.154181272448537806873380883469"
-    path_to_json = "extractor.json"
+    path_to_json = "init.json"
     client_id = "unit_test"
     path_white_list = "dicom_white_list.csv"
     path_to_dicom_csv = "pacs_list/dicom_imported_an_x3.csv"
     debug = False
-    path_to_json = "extractor.json"
+    path_to_json = "init.json"
 
     test_exam = medical_exam(client_id, path_to_json, path_white_list, path_to_dicom_csv, debug)
     
@@ -799,13 +799,13 @@ def test_dicom_tag_blanking():
         """
 
     stored_dicom = "data_test/tag_test.dcm"
-    path_to_json = "extractor.json"
+    path_to_json = "init.json"
     client_id = "unit_test"
     path_white_list = "dicom_white_list.csv"
     path_to_black_list = "data_test/dicom_black_list.csv"
     path_to_dicom_csv = "pacs_list/dicom_imported_an_x3.csv"
     debug = False
-    path_to_json = "extractor.json"
+    path_to_json = "init.json"
     test_exam = medical_exam(client_id, path_to_json, path_white_list, path_to_dicom_csv, debug)
     
     test_exam.ds_dicom = dcmread(stored_dicom)
@@ -844,12 +844,12 @@ def test_dicom_tag_for_mide():
     """Verifiy the DICOM InstitutionName, StationName, AcquisitionTime"""
 
     stored_dicom = "data_test/test_dx.dcm"
-    path_to_json = "extractor.json"
+    path_to_json = "init.json"
     client_id = "unit_test"
     path_white_list = "dicom_white_list.csv"
     path_to_dicom_csv = "pacs_list/dicom_imported_an_x3.csv"
     debug = False
-    path_to_json = "extractor.json"
+    path_to_json = "init.json"
 
     test_exam = medical_exam(client_id, path_to_json, path_white_list, path_to_dicom_csv, debug)
     test_exam.ds_dicom = dcmread(stored_dicom)
@@ -872,12 +872,12 @@ def test_store_on_cloud():
     path_dicom = "data_test/test_dx.dcm"
     ds_test_dx = dcmread(path_dicom)
 
-    path_to_json = "extractor.json"
+    path_to_json = "init.json"
     client_id = "unit_test"
     path_white_list = "dicom_white_list.csv"
     path_to_dicom_csv = "pacs_list/dicom_imported_an_x3.csv"
     debug = False
-    path_to_json = "extractor.json"
+    path_to_json = "init.json"
 
     test_exam = medical_exam(client_id, path_to_json, path_white_list, path_to_dicom_csv, debug)
 
@@ -892,100 +892,3 @@ def test_store_on_cloud():
     test_exam.store_on_cloud()
 
     assert test_exam.status == "cloud_storage_success"
-
-
-# # Functional test
-# @pytest.mark.anonymization_functional
-# def test_image_anonymization():
-#     """Process a batch of DICOM to check if the sensible data had been correctly erazed
-#         input:  Batch of DICOM
-#                 file with the sensible and it's geomtric position (.csv)
-#         output: test for less than 5% failure
-#                 parameter report file for case analysis(.csv) """
-                
-#     # Initialization
-
-#     # anonimization ratio
-#     anonymization_ratio = 0.6 # ex: 0.6 => 40% of sensible data have to be deleted
-    
-#     path_to_folder = "data_test/anonym_batch"
-#     path_to_white_list = "dicom_white_list.csv"
-#     path_to_dicom_batch = "data_test/anonym_batch.csv"
-#     # batch_name = "batch_unittest"
-#     client_id = "client_unittest"
-#     report_date = "01-01-2021"
-#     # Read batch csv
-#     df_batch =  pd.read_csv(path_to_dicom_batch)
-
-#     # Initialize csv tracker
-#     df_batch_tracker = pd.DataFrame(
-#             columns=["file_name", "x", "y", "w", "h", "box_t0_mean", "box_mean_t1", "ratio","erased","word_to_blank"])
-#     df_batch_tracker.set_index("file_name", inplace=True)
-#     df_batch_tracker.to_csv("batch_tracker.csv", header=True)
-
-#     df_white_list = pd.read_csv(path_to_white_list, usecols=["tag"])
-    
-#     total_batch = df_batch.shape[0]
-
-#     for batch_ptr in range(total_batch):
-
-#         fail_counter = 0
-#         # Set eraze flag to Flase
-#         ser_batch = df_batch.iloc[batch_ptr].copy()
-#         ser_batch["erased"] = "False"
-
-#         # Open DICOM
-#         path = pathlib.Path(path_to_folder, ser_batch["file_name"])
-#         ds_dicom = dcmread(path)
-
-
-
-#         # Set Region Of Interrest geometry
-#         x = ser_batch["x"]
-#         y = ser_batch["y"]
-#         w = ser_batch["w"]
-#         h = ser_batch["h"]
-
-#         # get ROI mean value after blanking
-#         box_mean_t0 = np.mean(ds_dicom.pixel_array[y:y+h, x:x+w])
-
-
-#         # call main anonymization function
-#         ds_dicom, list_anonym_tracker_tmp, image_filtered, image_png, batch_name = main_anonymization(
-#             path, df_white_list, client_id, report_date)
-
-
-#         # get ROI mean value after blanking
-#         box_mean_t1 = np.mean(ds_dicom.pixel_array[y:y+h, x:x+w])
-
-#         # ROI consider to be erazed IF output ROI less than ratio
-#         if box_mean_t1 < box_mean_t0 * anonymization_ratio:
-#             ser_batch["erased"] = True
-#         else:
-#             fail_counter += 1
-
-#         # Write the csv tacker 
-#         df_batch_tracker = pd.DataFrame({"file_name": [ser_batch.at["file_name"]],
-#                                 "x": [ser_batch.at["x"]],
-#                                 "y": [ser_batch.at["y"]],
-#                                 "w": [ser_batch.at["w"]],
-#                                 "h": [ser_batch.at["h"]],
-#                                 "box_t0_mean": box_mean_t0,
-#                                 "box_mean_t1": box_mean_t1,
-#                                 "blanck_ratio": round(box_mean_t1/box_mean_t0, 4),
-#                                 "erased": [ser_batch.at["erased"]],
-#                                 "word_to_blank": ser_batch.at["word_to_blank"]})
-#         df_batch_tracker.set_index("file_name", inplace=True)
-#         df_batch_tracker.to_csv("batch_tracker.csv", mode="a", header=False, index=True)
-
-
-        
-#         # # uncomment to get output DICOM and values
-#         # path_to_save = "tmp_dicom"
-#         # path_to_save = pathlib.Path(path_to_save, ser_batch["file_name"])
-#         # print(path_to_save)
-#         # ds_dicom.save_as(path_to_save)
-#         # print(f"box t0 mean: {box_mean_t0}")
-#         # print(f"box t mean: {box_mean_t1}")
-
-#     assert fail_counter/total_batch < 0.2

@@ -1,68 +1,60 @@
-tag,tag_name,private,comment,
-00020000,FileMetaInformationGroupLength,,DICOM Header
-00020001,FileMetaInformationVersion,,DICOM Header
-00020002,MediaStorageSOPClassUID,,DICOM Header
-00020003,MediaStorageSOPInstanceUID,,DICOM Header
-00020010,TransferSyntaxUID,,DICOM Header
-00020012,ImplementationClassUID,,DICOM Header
-00020013,ImplementationVersionName,,DICOM Header
-00020016,SourceApplicationEntityTitle,,DICOM Header
-00080008,ImageType,,caracteristique technique de l'image,
-00080020,StudyDate,,examn date: deidentification to YYYYMM,
-00080032,AcquisitionTime,,replace by MIDE export date*
-00080050,AccessionNumber,,replace by the report-DICOM link number
-00080060,Modality,,type de modalite (ex: CR),
-00080070,Manufacturer,,fabricant du DM,
-00080080,InstitutionName,,replaced by client_id encoded*
-00081010,StationName,,replaced by MIDE_version*
-00100020,PatientID,,set to 0
-00081030,StudyDescription,,description de l examen (ex: radio membre inf),
-00081032,ProcedureCodeSequence,,type d examen,
-0008103E,SeriesDescription,,desciption de la serie (coupe sur axe long),
-00081090,ManufacturerModelName,,modele du DM,
-00082218,AnatomicRegionSequence,,region anatomique exploree (ex: main),
-00100040,PatientSex,,sexe du patient,
-00101010,PatientAge,,patient age rounded to 5 years
-00180015,BodyPartExamined,,region anatomique exploree,
-00180060,KVP,,valeur maximal en volt du tir RX,
-00181050,SpatialResolution,,resolution spacial de l'equipement d aquisition,
-00181164,ImagerPixelSpacing,,distance entre chaque pixel du detecteur,
-00181166,Grid,,identification de la grille du DM,
-00181405,RelativeXRayExposure,,exposition au rayon X du capteur du DM,
-00185101,ViewPosition,,position du patient (ex: decubitus droit),
-0018702A,DetectorManufacturerName,,nom du detecteur du DM,
-0018702B,DetectorManufacturerModelName,,modele du detecteur du DM,
-00200011,SeriesNumber,,numero d identification de la serie d images,
-00200013,InstanceNumber,,numero d identification de l'instance ,x
-00200020,PatientOrientation,,orientation du patient (ex: anterieur),
-00200060,Laterality,,lateralite de region anatomique exploree,
-00200062,ImageLaterality,,lateralite de l'image (ex: gauche),
-00280002,Samples Per Pixel,,nombre de couche composant l'image,x
-00280004,PhotometricInterpretation,,niveau du blanc dans l image,x
-00280006,PlanarConfiguration
-00280010,Rows,,nombre de pixel horizontaux de l'image,x
-00280011,Columns,,nombre de pixel  verticaux de l'image,x
-00280030,PixelSpacing,,distance entre chaque pixel de l image,x
-00280034,PixelAspectRatio,,forme des pixels,
-00280100,BitsAllocated,,profondeur d encodage d un pixel,x
-00280101,BitsStored,,nombre de bits stocke par pixel,x
-00280102,HighBit,,bit de poid fort par pixel,x
-00280103,PixelRepresentation,,format d'encodage des pixel,x
-00280106,SmallestImagePixelValue,,pixel le plus faible de l image,
-00280107,LargestImagePixelValue,,pixel le plus fort de l image,
-00280301,BurnedInAnnotation,,Indicates whether or not image contains burned in annotation,
-00281050,WindowCenter,,valeur Hounsfield central de l image,
-00281051,WindowWidth,,valeur Hounsfield de l de largeur de l image,
-00282110,LossyImageCompression,,Information de compression de  l image,
-00282112,Lossy Image Compression Ratio,,ratio de compression,
-00282114,Lossy Image Compression Method,,methode de compression,
-20500020,PresentationLUTShape,,forme de la filtration applique a l image,
-36791000,private exportVersion,x,version du logiciel d'exportation de Gleamer,
-36791010,private glmPatientId,x,id patient cripte suivant la methode SHA256,
-36791020,private glmStudyId,x,study id cripte suivant la methode SHA256,
-36791030,private glmSeriesId,x,series id cripte suivant la methode SHA256,
-36791040,private glmInstanceId,x,instance id cripte suivant la methode SHA256,
-36791050,private exportBatchCode,x,nom du lot d'exportation,
-36791060,private clientId,x,nom du partenaire,
-36791070,private export_date,x,date d exportation,
-7FE00010,PixelData,,image de l examen medical,
+"tag","tag_name","comment"
+20000,"FileMetaInformationGroupLength","DICOM Header"
+20001,"FileMetaInformationVersion","DICOM Header"
+20002,"MediaStorageSOPClassUID","DICOM Header"
+20003,"MediaStorageSOPInstanceUID","DICOM Header"
+20010,"TransferSyntaxUID","DICOM Header"
+20012,"ImplementationClassUID","DICOM Header"
+20013,"ImplementationVersionName","DICOM Header"
+20016,"SourceApplicationEntityTitle","DICOM Header"
+80008,"ImageType",
+80020,"StudyDate","examn date: deidentification to YYYYMM"
+80032,"AcquisitionTime","replace by MIDE export date*"
+80050,"AccessionNumber","replace by the report-DICOM link number"
+80060,"Modality",
+80070,"Manufacturer",
+80080,"InstitutionName","replaced by client_id encoded*"
+81010,"StationName","replaced by MIDE_version*"
+100020,"PatientID","set to 0"
+81030,"StudyDescription",
+81032,"ProcedureCodeSequence",
+"0008103E","SeriesDescription",
+81090,"ManufacturerModelName",
+82218,"AnatomicRegionSequence",
+100040,"PatientSex",
+101010,"PatientAge","patient age rounded to 5 years"
+180015,"BodyPartExamined",
+180060,"KVP",
+181050,"SpatialResolution",
+181164,"ImagerPixelSpacing",
+181166,"Grid",
+181405,"RelativeXRayExposure",
+185101,"ViewPosition",
+"0018702A","DetectorManufacturerName",
+"0018702B","DetectorManufacturerModelName",
+200011,"SeriesNumber",
+200013,"InstanceNumber",
+200020,"PatientOrientation",
+200060,"Laterality",
+200062,"ImageLaterality",
+280002,"Samples Per Pixel",
+280004,"PhotometricInterpretation",
+280006,"PlanarConfiguration",
+280010,"Rows",
+280011,"Columns",
+280030,"PixelSpacing",
+280034,"PixelAspectRatio",
+280100,"BitsAllocated",
+280101,"BitsStored",
+280102,"HighBit",
+280103,"PixelRepresentation",
+280106,"SmallestImagePixelValue",
+280107,"LargestImagePixelValue",
+280301,"BurnedInAnnotation",
+281050,"WindowCenter",
+281051,"WindowWidth",
+282110,"LossyImageCompression",
+282112,"Lossy Image Compression Ratio",
+282114,"Lossy Image Compression Method",
+20500020,"PresentationLUTShape",
+"7FE00010","PixelData",
