@@ -1,0 +1,37 @@
+tag,tag_name,value_type,left_addr,right_addr
+00080018,SOPInstanceUID,empty,8,24
+00080050,AccessionNumber,empty,8,80
+00080080,InstitutionName,empty,8,128
+00080090,ReferringPhysicianName,empty,8,144
+00081111,ReferencedPerformedProcedureStepSequence,empty,8,4369
+00082112,SourceImageSequence,empty,8,8466
+00100010,PatientName,empty,16,16
+00100020,PatientID,empty,16,32
+00100030,PatientBirthDate,limited,16,48
+0020000D,StudyInstanceUID,empty,32,13
+0020000E,SeriesInstanceUID,empty,32,14
+00200010,StudyID,empty,32,16
+00321032,RequestingPhysician,empty,50,4146
+00321033,RequestingService,empty,50,4147
+
+# (0x0010,0x0021) Issuer of Patient ID Attribute 
+# (0x0010,0x0022) Type of Patient ID Attribute
+# (0x0010,0x0024) Issuer of Patient ID Qualifiers Sequence Attribute
+# (0x0010,0x0033) Patient's Birth Date in Alternative Calendar Attribute
+# (0x0010,0x0034) Patient's Death Date in Alternative Calendar Attribute
+# (0x0010,0x0035) Patient's Alternative Calendar Attribute
+# (0x0010,0x1001) Other Patient Names Attribute
+# (0x0010,0x1002) Other Patient IDs Sequence Attribute
+# (0x0010,0x1100) Referenced Patient Photo Sequence Attribute
+# (0x0010,0x2297) Responsible Person Attribute
+# (0x0010,0x4000) Patient Comments Attribute
+# (0x0008,0x0096) Referring Physician Identification Sequence Attribute
+# (0x0008,0x009C) Consulting Physician's Name Attribute
+# (0x0008,0x1048) Physician(s) of Record Attribute
+# (0x0008,0x1049) Physician(s) of Record Identification Sequence Attribute
+# (0x0008,0x1060) Name of Physician(s) Reading Study Attribute
+# (0x0008,0x1062) Physician(s) Reading Study Identification Sequence Attribute
+# (0x0008,0x1050) Performing Physician's Name Attribute
+# (0x0008,0x1052) Performing Physician Identification Sequence Attribute
+# (0x0008,0x1070) Operators' Name Attribute
+# (0x0008,0x1072) Operator Identification Sequence Attribute

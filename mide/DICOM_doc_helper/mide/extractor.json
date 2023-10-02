@@ -1,0 +1,28 @@
+{
+      "unit_test": {
+            "aet_title":"DEVICE",
+            "aet_ip": "127.0.0.1",
+            "aet_port": 10400,
+            "aec_title": "UNIT_TEST_PACS",
+            "aec_ip" : "127.0.0.1",
+            "aec_port": 11100,
+            "output_folder": ["./output"],
+            "cloud_storage": "midedicomstorage",
+            "modality": ["DX","CR", "US", "CT", "MRI"],
+            "image_modality_anonymisation": ["DX", "CR"],
+            "delay": 1
+      },
+      "pacs_orthanc": {
+            "aet_title": "DEVICE",
+            "aet_ip": "127.0.0.1",
+            "aet_port": 10400,
+            "aec_title": "ORTHANC",
+            "aec_ip" : "192.168.1.100",
+            "aec_port": 4242,
+            "output_folder": ["./output"],
+            "cloud_storage": "midedicomstorage",
+            "modality": ["DX","CR", "US", "CT", "MRI"],
+            "image_modality_anonymisation": ["DX", "CR"],
+            "delay": 1
+      }
+}
